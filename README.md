@@ -2,7 +2,7 @@
 水滴效果指示器
 有任何问题或者建议欢迎大家在Issues里向我提出
 # 效果图
-
+![效果预览](https://github.com/juyao/WaterDropIndicatorDemo/blob/master/gif/ezgif-4-882802b2e1.gif)
 # Gradle快速集成
    Add it in your root build.gradle at the end of repositories:
    ```
