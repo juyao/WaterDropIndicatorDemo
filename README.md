@@ -12,6 +12,7 @@
    			maven { url 'https://jitpack.io' }
    		}
    	}
+
    	```
    	在项目中添加依赖：
    	```
