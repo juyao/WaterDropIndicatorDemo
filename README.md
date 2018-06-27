@@ -38,11 +38,11 @@
     waterdrop.setViewPager(viewpager)//关联viewpager
     waterdrop.setItemNum(3)//必须方法，设置viewpager item的个数
     ```
- ## 属性说明：
- |属性名称|作用|
- |:---|:---|
- |selectColor|选中的颜色|
- |defaultColor|默认的颜色|
- |itemSpace|指示器之间的距离|
- |bigRadius|指示器半径|
+ ## 属性说明
+|属性名称|作用|
+|:---|:---|
+|selectColor|选中的颜色|
+|defaultColor|默认的颜色|
+|itemSpace|指示器之间的距离|
+|bigRadius|指示器半径|
 
