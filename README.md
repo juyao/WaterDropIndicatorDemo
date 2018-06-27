@@ -39,7 +39,7 @@ allprojects {
         app:itemSpace="60dp"
         app:bigRadius="15dp"/>
 ```
-代码中引用：
+代码中设置：
 ```
 viewpager.adapter=MyVpAdapter()
 waterdrop.setViewPager(viewpager)//关联viewpager
