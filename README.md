@@ -38,7 +38,7 @@
     waterdrop.setViewPager(viewpager)//关联viewpager
     waterdrop.setItemNum(3)//必须方法，设置viewpager item的个数
     ```
- ## 属性说明
+## 属性说明
 |属性名称|作用|
 |:---|:---|
 |selectColor|选中的颜色|
