@@ -68,27 +68,28 @@ public class WaterDropIndicator extends View {
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
                 Log.i("qqq===","position="+position+",positionOffset="+positionOffset+",positionOffsetPixels="+positionOffsetPixels);
                 int eachDistance=itemSpace+bigRadius*2;
-                centerX=(int) (bigRadius+(eachDistance)*position+eachDistance*positionOffset);
+                centerX=(int) (bigRadius+(eachDistance)*(position-1)+eachDistance*positionOffset);
                 int totalLength= (int) ((itemSpace+bigRadius*2)*0.66);
                 if(positionOffset<0.33f){
-                    leftX=bigRadius+(itemSpace+bigRadius*2)*position;
+                    leftX=bigRadius+(itemSpace+bigRadius*2)*(position-1);
                     rightX=leftX+(centerX-leftX)*2;
                 }else if(0.33f<positionOffset&&positionOffset<0.66f){
                     leftX=centerX-totalLength/2;
                     rightX=centerX+totalLength/2;
                 }else{
-                    if(rightX<bigRadius+(itemSpace+bigRadius*2)*(position+1)){
+                    if(rightX<bigRadius+(itemSpace+bigRadius*2)*((position-1)+1)){
                         leftX=centerX-totalLength/2;
                         rightX=centerX+totalLength/2;
                     }else{
-                        rightX=bigRadius+(itemSpace+bigRadius*2)*(position+1);
+                        rightX=bigRadius+(itemSpace+bigRadius*2)*((position-1)+1);
                         leftX=rightX-(rightX-centerX)*2;
                     }
                 }
-                int left=bigRadius+(itemSpace+bigRadius*2)*position;
-                int right=bigRadius+(itemSpace+bigRadius*2)*(position+1);
+                int left=bigRadius+(itemSpace+bigRadius*2)*(position-1);
+                int right=bigRadius+(itemSpace+bigRadius*2)*((position-1)+1);
                 float leftRate=((float)(leftX-left))/((float)(right-left));
                 if(leftRate<0.5){
                     leftRadius= (int) (2*(smallRadius-bigRadius)*leftRate+bigRadius);
@@ -107,7 +108,7 @@ public class WaterDropIndicator extends View {
             }
             @Override
             public void onPageSelected(int position) {
-                currentItemPosition=position;
+                currentItemPosition=(position-1);
             }
 
             @Override
