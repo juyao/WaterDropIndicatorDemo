@@ -104,6 +104,19 @@ public class WaterDropIndicator extends View {
                     rightRadius= (int) (2*(bigRadius-smallRadius)*rightRate+2*smallRadius-bigRadius);
                 }
                 Log.i("leftRadius","leftRadius="+ leftRadius);
+                int rightBounds=bigRadius+((itemSpace+bigRadius*2)*(itemNum-1));
+                if(rightX>rightBounds){
+                    rightX=rightBounds;
+                }
+                if(leftX>rightBounds){
+                    leftX=rightBounds;
+                }
+                if(leftX<bigRadius){
+                    leftX=bigRadius;
+                }
+                if(rightX<bigRadius){
+                    rightX=bigRadius;
+                }
                 invalidate();
             }
             @Override
